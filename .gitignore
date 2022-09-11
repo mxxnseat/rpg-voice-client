@@ -1,0 +1,10 @@
+/**/.yarn/*
+!/**/.yarn/releases
+!/**/.yarn/plugins
+!/**/.yarn/sdks
+/**/yarn.lock   -diff -merge
+/**/yarn.lock    linguist-generated=true
+
+.vscode
+node_modules
+dist
