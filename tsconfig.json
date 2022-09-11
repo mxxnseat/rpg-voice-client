@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es6",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "types": ["node", "dom-mediacapture-record"],
+    "baseUrl": ".",
+    "paths": {}
+  },
+  "include": ["src/**/*"]
+}
