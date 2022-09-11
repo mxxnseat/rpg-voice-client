@@ -2,8 +2,9 @@
 !/**/.yarn/releases
 !/**/.yarn/plugins
 !/**/.yarn/sdks
-/**/yarn.lock   -diff -merge
-/**/yarn.lock    linguist-generated=true
+/**/yarn.lock
+/**/yarn.lock  
+!/**/.yarn/cache
 
 .vscode
 node_modules
