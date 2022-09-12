@@ -3,7 +3,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin').CleanWebpackPlugin;
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
   entry: './src/index.ts',
@@ -12,7 +12,7 @@ module.exports = {
     filename: 'bundle-[hash].js',
   },
   resolve: {
-    plugins: [new TsconfigPathsPlugin()],
+    plugins: [new TsconfigPathsPlugin({})],
     extensions: ['.ts', '.js'],
   },
   module: {
@@ -48,14 +48,14 @@ module.exports = {
       patterns: [
         {
           from: '**/*',
-          context: path.resolve(__dirname, './src', 'static/assets'),
+          context: path.resolve(__dirname, './src', 'game/static/assets'),
           to: './dist/static/assets',
           noErrorOnMissing: true,
         },
       ],
     }),
     new HtmlWebpackPlugin({
-      template: 'src/static/index.html',
+      template: 'src/game/static/index.html',
       filename: 'index.html',
       minify: {
         collapseWhitespace: true,
