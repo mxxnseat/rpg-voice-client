@@ -91,10 +91,11 @@ rules:
   import/order:
     - error
     - groups:
-        - builtin
-        - external
-        - internal
         - type
+        - object
+        - internal
+        - external
         - parent
         - sibling
+
       newlines-between: never

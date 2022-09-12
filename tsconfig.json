@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "useDefineForClassFields": true,
     "module": "commonjs",
     "esModuleInterop": true,
     "allowJs": true,
@@ -7,12 +8,20 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "target": "es6",
+    "lib": ["ES6", "DOM"],
     "noImplicitAny": true,
     "moduleResolution": "node",
     "skipLibCheck": true,
     "sourceMap": true,
     "outDir": "dist",
-    "baseUrl": "."
+    "baseUrl": "./",
+    "types": ["reflect-metadata", "node"],
+    "paths": {
+      "@game/*": ["./src/game/*"],
+      "@core/*": ["./src/core/*"],
+      "@ioc/*": ["./src/ioc/*"]
+    }
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }
