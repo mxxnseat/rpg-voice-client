@@ -1,7 +1,3 @@
-export interface Position {
-  x: number;
-  y: number;
-}
 export interface MovingOptions {
   directionX: number;
   directionY: number;
