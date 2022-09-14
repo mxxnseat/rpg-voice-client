@@ -8,7 +8,6 @@ export class UserView {
   ) {}
 
   public draw({ x, y }: Position): void {
-    this._canvasContext.clearRect(0, 0, window.innerWidth, window.innerHeight);
     this._canvasContext.fillStyle = this._color;
     this._canvasContext.fillRect(x, y, PLAYER_SIZES.width, PLAYER_SIZES.height);
   }

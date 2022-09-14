@@ -21,6 +21,9 @@ export class Canvas {
     this.setDimensions();
     this.setResizeListener();
   }
+  public clear(): void {
+    this._context.clearRect(0, 0, innerWidth, innerHeight);
+  }
   private setResizeListener(): void {
     window.addEventListener('resize', () => {
       this.setDimensions();
