@@ -7,6 +7,10 @@ export class UserComponent {
   private readonly _model: UserModel;
   private readonly _view: UserView;
 
+  public get position(): Position {
+    return this._model.position;
+  }
+
   constructor(color: string, position: Position, canvas: Canvas) {
     this._view = new UserView(color, canvas.context);
     this._model = new UserModel(position);

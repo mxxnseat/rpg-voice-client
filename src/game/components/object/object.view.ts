@@ -1,4 +1,4 @@
-import { ObjectPosition, ObjectSize } from '@game/interfaces';
+import { ObjectPosition, ObjectSize, Position } from '@game/interfaces';
 import { degressToRadian } from '@game/utils';
 
 export class ObjectView {
@@ -8,11 +8,16 @@ export class ObjectView {
     private readonly _canvasContext: CanvasRenderingContext2D
   ) {}
 
-  public draw({ x, y, rotate }: ObjectPosition): void {
+  public draw(objectPosition: ObjectPosition, translation: Position): void {
     this._canvasContext.save();
     this._canvasContext.fillStyle = this._asset;
-    this._canvasContext.rotate(degressToRadian(rotate));
-    this._canvasContext.fillRect(x, y, this._size.width, this._size.height);
+    this._canvasContext.rotate(degressToRadian(objectPosition.rotate));
+    this._canvasContext.fillRect(
+      objectPosition.x - translation.x,
+      objectPosition.y - translation.y,
+      this._size.width,
+      this._size.height
+    );
     this._canvasContext.restore();
   }
 }

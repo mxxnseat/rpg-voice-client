@@ -14,3 +14,7 @@ export const MAP_COMPONENT_FACTORY_KEY = Symbol.for(
 export const OBJECT_COMPONENT_FACTORY_KEY = Symbol.for(
   '__OBJECT_COMPONENT_FACTORY__'
 );
+
+export const CAMERA_COMPONENT_FACTORY_KEY = Symbol.for(
+  '__CAMERA_COMPONENT_FACTORY__'
+);
