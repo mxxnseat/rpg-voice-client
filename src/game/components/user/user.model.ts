@@ -8,9 +8,7 @@ export class UserModel {
   public get position(): Position {
     return this._position;
   }
-  constructor(private _position: Position) {
-    this.center();
-  }
+  constructor(private _position: Position) {}
 
   public moving(): void {
     if (this.isNeedStop()) {
@@ -50,11 +48,5 @@ export class UserModel {
         ? this._movingOptions.endY - this._position.y
         : this._position.y - this._movingOptions.endY) <= 0;
     return xCondition && yCondition;
-  }
-  private center(): void {
-    this._position = {
-      x: innerWidth / 2 - this._position.x,
-      y: innerHeight / 2 - this._position.y,
-    };
   }
 }
